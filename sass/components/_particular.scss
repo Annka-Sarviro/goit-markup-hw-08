@@ -1,0 +1,34 @@
+.particular__thumb {
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  @include flex-centered;
+  background-color: var(--secondary-background-color);
+}
+
+.particular__icon {
+  width: 70px;
+  height: 70px;
+}
+
+.particular__block {
+  display: flex;
+}
+
+.particular__item {
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.particular__title {
+  @include text(700, 14px, 1.14, 0.03em, var(--text-color));
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.particular__text {
+  @include text(400, 14px, 1.71, 0.03em, var(--text-color-add));
+}

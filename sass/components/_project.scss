@@ -1,0 +1,66 @@
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--project-card-gap));
+  margin-left: calc(-1 * var(--project-card-gap));
+}
+
+.project__item {
+  background-color: var(--primary-white-color);
+  margin-left: var(--project-card-gap);
+  margin-top: var(--project-card-gap);
+}
+
+.project__link {
+  display: block;
+  width: 370px;
+  height: 404px;
+  @include transition(box-shadow);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.project__thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.project__overley {
+  background-color: rgba(33, 150, 243, 0.9);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  transform: translateY(100%);
+  @include transition(transform);
+
+  .project__link:hover &,
+  .project__link:focus & {
+    transform: translateY(0);
+  }
+}
+
+.project__overley-text {
+  @include text(400, 18px, 1.56, 0.03em, var(--primary-white-color));
+}
+
+.project__card {
+  padding: 20px 24px;
+  @include border(#eeeeee);
+  border-top: none;
+}
+
+.project__title {
+  @include text(700, 18px, 2, 0.06em, var(--text-color));
+  margin-bottom: 4px;
+}
+
+.project__description {
+  @include text(400, 16px, 1.88, 0.06em, var(--text-color-add));
+}

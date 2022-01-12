@@ -1,0 +1,33 @@
+.filtr {
+  @include flex-justify-centered;
+  margin-bottom: 50px;
+}
+
+.filtr__item {
+  margin-right: 8px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.filtr__btn {
+  font-family: Roboto;
+  @include text(500, 16px, 1.62, 0.03em, var(--text-color));
+  text-align: center;
+  background-color: var(--secondary-background-color);
+  border: none;
+  border-radius: 4px;
+  padding: 6px 22px;
+
+  @include transition-max-mix(color, border-color, box-shadow);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--primary-white-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+  }
+}
