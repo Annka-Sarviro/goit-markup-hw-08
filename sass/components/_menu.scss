@@ -31,3 +31,7 @@
 .menu-button.is-open .menu-button__icon--menu {
   display: none;
 }
+
+.menu-button.is-open {
+  z-index: 999;
+}

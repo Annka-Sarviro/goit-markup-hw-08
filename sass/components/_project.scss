@@ -15,7 +15,7 @@
     flex-basis: calc((100% - 60px) / 2);
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1200px) {
     flex-basis: calc((100% - 90px) / 3);
   }
 }
@@ -60,6 +60,11 @@
   padding: 20px 24px;
   @include border(#eeeeee);
   border-top: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .project__title {
@@ -69,6 +74,10 @@
 
 .project__description {
   @include text(400, 16px, 1.88, 0.06em, var(--text-color-add));
+
+  @media screen and (min-width: 768px) {
+    flex-grow: 1;
+  }
 }
 
 .project__img {
