@@ -9,12 +9,18 @@
   background-color: var(--primary-white-color);
   margin-left: var(--project-card-gap);
   margin-top: var(--project-card-gap);
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 60px) / 2);
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 90px) / 3);
+  }
 }
 
 .project__link {
-  display: block;
-  width: 370px;
-  height: 404px;
   @include transition(box-shadow);
 
   &:hover,
@@ -63,4 +69,8 @@
 
 .project__description {
   @include text(400, 16px, 1.88, 0.06em, var(--text-color-add));
+}
+
+.project__img {
+  width: 100%;
 }
