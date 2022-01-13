@@ -1,19 +1,41 @@
 .footer {
+  padding: 60px 0;
   background-color: var(--background-color-add);
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
 
 .footer__container {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    @include flex-centered;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: space-between;
+    text-align: left;
+  }
 }
 
 .footer__logo {
   display: inline-block;
+  font-size: 24px;
   margin-bottom: 20px;
   color: var(--primary-white-color);
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+  }
+}
+.contacts {
+  margin-bottom: 60px;
+  @media screen and (min-width: 768px) {
+    margin-right: 165px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+    margin-bottom: 0;
+  }
 }
 
 .contacts__item:not(:last-child) {
@@ -21,22 +43,30 @@
 }
 
 .contacts__address {
-  color: var(--primary-white-color);
+  @include text(400, 14px, 1.71, 0.03em, var(--primary-white-color));
 }
 
 .contacts__mail,
 .contacts__tel {
   @include text(400, 14px, 1.71, 0.03em, rgba(255, 255, 255, 0.6));
 }
-
+.subscribe {
+  margin-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 90px;
+    margin-bottom: 0;
+  }
+}
 .subscribe__title {
   @include text(700, 14px, 1.14, 0.03em, var(--primary-white-color));
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .subscribe__list {
-  display: flex;
-  margin-top: 20px;
+  @include flex-centered;
+  @media screen and (min-width: 1200px) {
+  }
 }
 
 .subscribe__item:not(:last-child) {
@@ -63,20 +93,31 @@
 }
 
 .mailing__form {
-  display: inline-block;
-  margin-right: 12px;
-  margin-top: 20px;
+  @media screen and (min-width: 1200px) {
+    @include flex-centered;
+  }
+}
+.mailing__label {
+  @media screen and (min-width: 1200px) {
+    margin-right: 12px;
+  }
 }
 
 .mailing__submit {
-  width: 358px;
-  height: 50px;
+  width: 100%;
   @include border(rgba(255, 255, 255, 0.3));
   border-radius: 4px;
   background-color: transparent;
   padding: 15px 16px;
   color: rgba(255, 255, 255, 0.6);
   font-family: inherit;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    height: 50px;
+    margin-bottom: 0;
+  }
 
   &::placeholder {
     color: rgba(255, 255, 255, 0.6);
@@ -85,6 +126,7 @@
 
 .mailing__btn {
   display: inline-flex;
+  justify-content: center;
   align-items: center;
 }
 

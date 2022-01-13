@@ -1,5 +1,8 @@
 .command {
   display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--project-card-gap));
+  margin-left: calc(-1 * var(--project-card-gap));
 }
 
 .command__item {
@@ -8,11 +11,30 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   text-align: center;
-  margin-right: 30px;
   overflow: hidden;
+  margin-left: var(--project-card-gap);
+  margin-top: var(--project-card-gap);
 
-  &:last-child {
-    margin-right: 0;
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 60px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 120px) / 4);
+  }
+}
+.command__img {
+  width: 450px;
+  height: 460px;
+
+  @media screen and (min-width: 768px) {
+    width: 354px;
+    height: 374px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+    height: 260px;
   }
 }
 
@@ -32,6 +54,7 @@
 
 .social {
   @include flex-justify-centered;
+  width: 100%;
 }
 
 .social__link {

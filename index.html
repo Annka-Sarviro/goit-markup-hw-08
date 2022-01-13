@@ -20,9 +20,17 @@
   <body>
     <header class="header">
       <div class="container header__container">
+        <div class="header__content">
+        <a href="./" class="logo header__logo"><span>Web</span>Studio</a>
+        <button type="button" class="menu-button" data-menu-button aria-expanded="false">
+          <svg width='40' height='40' aria-label="Кнопка мобильного меню" class="menu-button__icon">
+            <use href='./images/icons.svg#icon-menu' class="menu-button__icon--menu"></use>
+            <use href='./images/icons.svg#icon-close' class="menu-button__icon--cross"></use>
+          </svg>
+        </button>
+        <div class="header__nav">
         <nav class="site-nav">
-          <a href="./" class="logo header__logo"><span>Web</span>Studio</a>
-          <ul class="site-nav__list">
+            <ul class="site-nav__list">
             <li class="site-nav__item">
               <a href="./" class="site-nav__link site-nav__link--current">Студия</a>
             </li>
@@ -50,6 +58,8 @@
             >
           </li>
         </ul>
+        </div>
+        </div>
       </div>
     </header>
     <main>
@@ -118,7 +128,7 @@
       </section>
 
       <!-- Works-section -->
-      <section class="section section--no-padding-top">
+      <section class="section section--no-padding-top section__work">
         <div class="container">
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="work">
@@ -159,7 +169,7 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="command">
             <li class="command__item">
-              <img src="./images/team-card-1.jpg" alt="Портрет" width="270" />
+              <img src="./images/team-card-1.jpg" alt="Портрет" class="command__img" />
               <div class="command__thumb">
                 <h3 class="command__title">Игорь Демьяненко</h3>
                 <p class="command__text">Product Designer</p>
@@ -197,7 +207,7 @@
             </li>
 
             <li class="command__item">
-              <img src="./images/team-card-2.jpg" alt="Портрет" width="270"/>
+              <img src="./images/team-card-2.jpg" alt="Портрет" class="command__img"/>
               <div class="command__thumb">
                 <h3 class="command__title">Ольга Репина</h3>
                 <p class="command__text">Frontend Developer</p>
@@ -235,7 +245,7 @@
             </li>
 
             <li class="command__item">
-              <img src="./images/team-card-3.jpg" alt="Портрет" width="270" />
+              <img src="./images/team-card-3.jpg" alt="Портрет" class="command__img"/>
               <div class="command__thumb">
                 <h3 class="command__title">Николай Тарасов</h3>
                 <p class="command__text">Marketing</p>
@@ -273,7 +283,7 @@
             </li>
 
             <li class="command__item">
-              <img src="./images/team-card-4.jpg" alt="Портрет" width="270" />
+              <img src="./images/team-card-4.jpg" alt="Портрет" class="command__img"/>
               <div class="command__thumb">
                 <h3 class="command__title">Михаил Ермаков</h3>
                 <p class="command__text">UI Designer</p>
@@ -422,7 +432,8 @@
 
         <form class="mailing">
           <h3 class="subscribe__title">Подпишитесь на рассылку</h3>
-          <label class="mailing__form">
+          <div class="mailing__form">
+          <label class="mailing__label">
             <input type="text" placeholder="E-mail" class="mailing__submit" name="subscribe" />
           </label>
           <button type="submit" class="button mailing__btn">
@@ -431,6 +442,7 @@
               <use href="./images/icons.svg#icon-send"></use>
             </svg>
           </button>
+          </div>
         </form>
       </div>
     </footer>
@@ -500,6 +512,7 @@
       </div>
     </div>
 
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

@@ -1,0 +1,33 @@
+.menu-button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  margin-left: auto;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-button__icon {
+  fill: black;
+  @include transition(fill);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}
+
+.menu-button .menu-button__icon--cross {
+  display: none;
+}
+
+.menu-button.is-open .menu-button__icon--cross {
+  display: block;
+}
+
+.menu-button.is-open .menu-button__icon--menu {
+  display: none;
+}
