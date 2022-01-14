@@ -9,25 +9,32 @@
   background-color: var(--primary-white-color);
   margin-left: var(--project-card-gap);
   margin-top: var(--project-card-gap);
-  width: 100%;
+  flex-basis: 100%;
+  display: flex;
 
   @media screen and (min-width: 768px) {
-    flex-basis: calc((100% - 60px) / 2);
+    flex-basis: calc((100% - var(--project-card-gap) * 2) / 2);
   }
 
   @media screen and (min-width: 1200px) {
-    flex-basis: calc((100% - 90px) / 3);
+    flex-basis: calc((100% - var(--project-card-gap) * 3) / 3);
   }
 }
 
 .project__link {
   @include transition(box-shadow);
+  display: flex;
 
   &:hover,
   &:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
+}
+
+.project__article {
+  display: flex;
+  flex-direction: column;
 }
 
 .project__thumb {
@@ -57,14 +64,12 @@
 }
 
 .project__card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   padding: 20px 24px;
   @include border(#eeeeee);
   border-top: none;
-
-  @media screen and (min-width: 768px) {
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 .project__title {
@@ -74,10 +79,6 @@
 
 .project__description {
   @include text(400, 16px, 1.88, 0.06em, var(--text-color-add));
-
-  @media screen and (min-width: 768px) {
-    flex-grow: 1;
-  }
 }
 
 .project__img {
