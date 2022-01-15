@@ -22,10 +22,12 @@
   font-size: 24px;
   margin-bottom: 20px;
   color: var(--primary-white-color);
+
   @media screen and (min-width: 1200px) {
     font-size: 26px;
   }
 }
+
 .contacts {
   margin-bottom: 60px;
   @media screen and (min-width: 768px) {

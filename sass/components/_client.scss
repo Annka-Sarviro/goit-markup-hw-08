@@ -3,8 +3,6 @@
   flex-wrap: wrap;
   margin-top: calc(-1 * var(--project-card-gap));
   margin-left: calc(-1 * var(--project-card-gap));
-  // margin-left: auto;
-  // margin-right: auto;
 }
 
 .client__item {
@@ -15,7 +13,7 @@
 .client__link {
   @include flex-centered;
   padding: 16px 51px;
-  flex-basis: calc((100% - 60px) / 2);
+  flex-basis: calc((100% - var(--project-card-gap) * 2) / 2);
   @include border(var(--social-link-color));
   border-radius: 4px;
   color: var(--social-link-color);
@@ -28,12 +26,12 @@
   }
 
   @media screen and (min-width: 768px) {
-    flex-basis: calc((100% - 90px) / 3);
+    flex-basis: calc((100% - var(--project-card-gap) * 3) / 3);
   }
 
   @media screen and (min-width: 1200px) {
-    padding: 16px 31px;
-    flex-wrap: nowrap;
+    padding: 16px 30px;
+    flex-basis: calc((100% - var(--project-card-gap) * 6) / 6);
   }
 }
 

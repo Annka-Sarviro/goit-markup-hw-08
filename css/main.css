@@ -937,9 +937,9 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 16px 51px;
-  -webkit-flex-basis: -webkit-calc((100% - 60px) / 2);
-      -ms-flex-preferred-size: calc((100% - 60px) / 2);
-          flex-basis: calc((100% - 60px) / 2);
+  -webkit-flex-basis: -webkit-calc((100% - var(--project-card-gap) * 2) / 2);
+      -ms-flex-preferred-size: calc((100% - var(--project-card-gap) * 2) / 2);
+          flex-basis: calc((100% - var(--project-card-gap) * 2) / 2);
   border: 1px solid var(--social-link-color);
   -webkit-border-radius: 4px;
           border-radius: 4px;
@@ -956,18 +956,18 @@ img {
 
 @media screen and (min-width: 768px) {
   .client__link {
-    -webkit-flex-basis: -webkit-calc((100% - 90px) / 3);
-        -ms-flex-preferred-size: calc((100% - 90px) / 3);
-            flex-basis: calc((100% - 90px) / 3);
+    -webkit-flex-basis: -webkit-calc((100% - var(--project-card-gap) * 3) / 3);
+        -ms-flex-preferred-size: calc((100% - var(--project-card-gap) * 3) / 3);
+            flex-basis: calc((100% - var(--project-card-gap) * 3) / 3);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .client__link {
-    padding: 16px 31px;
-    -webkit-flex-wrap: nowrap;
-        -ms-flex-wrap: nowrap;
-            flex-wrap: nowrap;
+    padding: 16px 30px;
+    -webkit-flex-basis: -webkit-calc((100% - var(--project-card-gap) * 6) / 6);
+        -ms-flex-preferred-size: calc((100% - var(--project-card-gap) * 6) / 6);
+            flex-basis: calc((100% - var(--project-card-gap) * 6) / 6);
   }
 }
 
@@ -1224,6 +1224,16 @@ img {
   margin-left: 10px;
 }
 
+.filtr__container {
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 1200px) {
+  .filtr__container {
+    margin-bottom: 50px;
+  }
+}
+
 .filtr {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1246,16 +1256,6 @@ img {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-}
-
-.filtr__container {
-  margin-bottom: 40px;
-}
-
-@media screen and (min-width: 1200px) {
-  .filtr__container {
-    margin-bottom: 50px;
   }
 }
 
