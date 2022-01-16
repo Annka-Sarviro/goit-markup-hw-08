@@ -20,7 +20,6 @@
 .header__nav {
   background-color: var(--primary-white-color);
   @include flex-centered;
-  align-items: baseline;
   width: 100%;
 
   @media screen and (max-width: 767px) {
