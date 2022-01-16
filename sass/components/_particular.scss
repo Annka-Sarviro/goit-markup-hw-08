@@ -8,6 +8,10 @@
 }
 
 .particular__item {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
   @media screen and (min-width: 768px) {
     margin-left: var(--project-card-gap);
     margin-top: var(--project-card-gap);
@@ -40,7 +44,12 @@
 .particular__title {
   @include text(700, 14px, 1.14, 0.03em, var(--text-color));
   text-transform: uppercase;
+  text-align: center;
   margin-bottom: 10px;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
 }
 
 .particular__text {

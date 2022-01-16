@@ -8,12 +8,23 @@
 .client__item {
   margin-left: var(--project-card-gap);
   margin-top: var(--project-card-gap);
+  display: flex;
+  height: 92px;
+  flex-basis: calc((100% - var(--project-card-gap) * 2) / 2);
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - var(--project-card-gap) * 3) / 3);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - var(--project-card-gap) * 6) / 6);
+  }
 }
 
 .client__link {
   @include flex-centered;
-  padding: 16px 51px;
-  flex-basis: calc((100% - var(--project-card-gap) * 2) / 2);
+  height: 100%;
+  width: 100%;
   @include border(var(--social-link-color));
   border-radius: 4px;
   color: var(--social-link-color);
@@ -23,15 +34,6 @@
   &:focus {
     color: var(--accent-color);
     border-color: var(--accent-color);
-  }
-
-  @media screen and (min-width: 768px) {
-    flex-basis: calc((100% - var(--project-card-gap) * 3) / 3);
-  }
-
-  @media screen and (min-width: 1200px) {
-    padding: 16px 30px;
-    flex-basis: calc((100% - var(--project-card-gap) * 6) / 6);
   }
 }
 

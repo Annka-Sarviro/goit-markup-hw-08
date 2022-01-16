@@ -6,7 +6,8 @@
 .footer__container {
   text-align: center;
   @media screen and (min-width: 768px) {
-    @include flex-centered;
+    display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
     align-items: baseline;
   }
@@ -29,13 +30,12 @@
 }
 
 .contacts {
-  margin-bottom: 60px;
-  @media screen and (min-width: 768px) {
-    margin-right: 165px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
   }
 
   @media screen and (min-width: 1200px) {
-    margin-right: 70px;
+    flex-basis: 1;
     margin-bottom: 0;
   }
 }
@@ -53,10 +53,8 @@
   @include text(400, 14px, 1.71, 0.03em, rgba(255, 255, 255, 0.6));
 }
 .subscribe {
-  margin-bottom: 60px;
-  @media screen and (min-width: 1200px) {
-    margin-right: 90px;
-    margin-bottom: 0;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
   }
 }
 .subscribe__title {
@@ -91,6 +89,12 @@
   &:hover,
   &:focus {
     background-color: var(--accent-color);
+  }
+}
+
+.mailing {
+  @media screen and (min-width: 768px) {
+    margin-top: 60px;
   }
 }
 

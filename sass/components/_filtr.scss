@@ -1,12 +1,6 @@
-.filtr__container {
+.filtr {
   margin-bottom: 40px;
 
-  @media screen and (min-width: 1200px) {
-    margin-bottom: 50px;
-  }
-}
-
-.filtr {
   @include flex-align-centered;
   flex-wrap: wrap;
   margin-left: -8px;
@@ -15,8 +9,11 @@
   @media screen and (min-width: 768px) {
     justify-content: center;
   }
-}
 
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
+}
 
 .filtr__item {
   margin-left: 8px;
