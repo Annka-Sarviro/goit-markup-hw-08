@@ -16,6 +16,10 @@
     margin-left: var(--project-card-gap);
     margin-top: var(--project-card-gap);
     width: calc((100% - 60px) / 2);
+
+    &:not(:last-child) {
+      margin-bottom: 0px;
+    }
   }
 
   @media screen and (min-width: 1200px) {

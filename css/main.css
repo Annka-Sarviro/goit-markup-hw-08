@@ -679,6 +679,9 @@ img {
     width: -webkit-calc((100% - 60px) / 2);
     width: calc((100% - 60px) / 2);
   }
+  .particular__item:not(:last-child) {
+    margin-bottom: 0px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1152,6 +1155,12 @@ img {
 @media screen and (min-width: 768px) {
   .mailing {
     margin-top: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .mailing {
+    margin-top: 0px;
   }
 }
 
